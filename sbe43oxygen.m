@@ -77,7 +77,8 @@ C = cal.C;
 E = cal.E;
 
 % calculate the oxygen solubility
-oxsol = sbeO2sol( s, t );
+% oxsol = sbeO2sol( s, t );
+[oxsol, ~] = sbsoxygensol( t, s, 'sbs' );
 
 % calculate the temperature dependence term
 tcorr = 1.0 + A.*t + B.*t.*t + C.*t.*t.*t;
